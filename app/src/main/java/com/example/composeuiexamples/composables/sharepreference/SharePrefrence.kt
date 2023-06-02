@@ -1,0 +1,35 @@
+package com.example.composeuiexamples.composables.sharepreference
+
+import android.content.Context
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.stringPreferencesKey
+import androidx.datastore.preferences.preferencesDataStore
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
+
+class SharePreference(private val context: Context) {
+
+    companion object{
+        private val Context.datastore: DataStore<Preferences> by preferencesDataStore("project_pref")
+
+        // items
+        val USER_EMAIL_KEY = stringPreferencesKey("user_email")
+        // here add other keys
+     }
+
+
+    // get email
+    val getEmail: Flow<String?> = context.datastore.data
+        .map { preferences ->
+            preferences[USER_EMAIL_KEY] ?: ""
+        }
+
+   // setEmail
+    suspend fun setEmail(name:String){
+        context.datastore.edit { preferences ->
+            preferences[USER_EMAIL_KEY] = name
+        }
+    }
+}
