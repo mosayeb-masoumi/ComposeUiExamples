@@ -114,6 +114,23 @@ fun HomeIndex(navController: NavHostController) {
         }
 
 
+        item {
+            Button(onClick = {
+                navController.navigate(Destination.LoginVideoBgScreen.route)
+            } , modifier = Modifier.padding(bottom = 10.dp)) {
+                Text("Login Video Bg Page" , fontWeight = FontWeight.Bold , fontSize = 20.sp)
+            }
+        }
+
+        item {
+            Button(onClick = {
+                navController.navigate(Destination.ButtonLoadingScreen.route)
+            } , modifier = Modifier.padding(bottom = 10.dp)) {
+                Text("Button Loading Screen" , fontWeight = FontWeight.Bold , fontSize = 20.sp)
+            }
+        }
+
+
 
 
 

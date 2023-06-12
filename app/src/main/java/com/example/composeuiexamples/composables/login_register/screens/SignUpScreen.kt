@@ -1,4 +1,4 @@
-package com.example.composeuiexamples.composables.register_login.screens
+package com.example.composeuiexamples.composables.login_register.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -14,8 +14,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.composeuiexamples.R
-import com.example.composeuiexamples.composables.register_login.DestinationRegisterLogin
-import com.example.composeuiexamples.composables.register_login.components.*
+import com.example.composeuiexamples.composables.login_register.DestinationRegisterLogin
+import com.example.composeuiexamples.composables.login_register.components.*
 
 @Composable
 fun SignUpScreen(navController: NavHostController) {

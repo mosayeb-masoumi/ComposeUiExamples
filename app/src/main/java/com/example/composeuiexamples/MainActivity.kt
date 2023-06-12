@@ -15,12 +15,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.composeuiexamples.composables.*
+import com.example.composeuiexamples.composables.Button_Loading.ButtonLoadingScreen
 import com.example.composeuiexamples.composables.botombar_animation.BottomBarAnimationScreen
 import com.example.composeuiexamples.composables.bottombar_badge_lackner.BottomBarBadgeScreen
 import com.example.composeuiexamples.composables.instagram_profile.InstagramProfileScreen
 import com.example.composeuiexamples.composables.permission.PermissionPage
-import com.example.composeuiexamples.composables.register_login.RegisterLogin
-import com.example.composeuiexamples.composables.register_login.screens.SignUpScreen
+import com.example.composeuiexamples.composables.login_register.RegisterLogin
+import com.example.composeuiexamples.composables.login_video_bg.LoginVideoBgScreen
 import com.example.composeuiexamples.composables.sharepreference.SharePreferenceScreen
 import com.example.composeuiexamples.ui.theme.ComposeUIExamplesTheme
 
@@ -35,12 +36,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-//                    val navController = rememberNavController()
-//                    NavigationAppHost(navController = navController)
-
-
-                    RegisterLogin()
-
+                    val navController = rememberNavController()
+                    NavigationAppHost(navController = navController)
                 }
             }
         }
@@ -67,6 +64,8 @@ sealed class Destination(var route: String) {
     object InstagramProfileScreen : Destination("InstagramProfile_Screen")
     object BottomBarAnimationScreen : Destination("BottomBarAnimation_Screen")
     object BottomBarBadgeScreen : Destination("BottomBarBadge_Screen")
+    object LoginVideoBgScreen : Destination("loginVideoBg_Screen")
+    object ButtonLoadingScreen : Destination("buttonLoading_Screen")
 }
 
 
@@ -98,6 +97,8 @@ fun NavigationAppHost(navController: NavHostController) {
         composable(Destination.InstagramProfileScreen.route) {InstagramProfileScreen() }
         composable(Destination.BottomBarAnimationScreen.route) {BottomBarAnimationScreen() }
         composable(Destination.BottomBarBadgeScreen.route) {BottomBarBadgeScreen() }
+        composable(Destination.LoginVideoBgScreen.route) {LoginVideoBgScreen() }
+        composable(Destination.ButtonLoadingScreen.route) {ButtonLoadingScreen() }
     }
 }
 

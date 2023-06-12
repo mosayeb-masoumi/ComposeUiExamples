@@ -1,13 +1,13 @@
-package com.example.composeuiexamples.composables.register_login
+package com.example.composeuiexamples.composables.login_register
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.composeuiexamples.composables.register_login.screens.LogInScreen
-import com.example.composeuiexamples.composables.register_login.screens.SignUpScreen
-import com.example.composeuiexamples.composables.register_login.screens.TermsAndConditionScreen
+import com.example.composeuiexamples.composables.login_register.screens.LogInScreen
+import com.example.composeuiexamples.composables.login_register.screens.SignUpScreen
+import com.example.composeuiexamples.composables.login_register.screens.TermsAndConditionScreen
 
 
 

@@ -1,4 +1,4 @@
-package com.example.composeuiexamples.composables.register_login.screens
+package com.example.composeuiexamples.composables.login_register.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
