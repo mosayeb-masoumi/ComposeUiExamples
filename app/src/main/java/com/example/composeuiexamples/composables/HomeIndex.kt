@@ -130,6 +130,14 @@ fun HomeIndex(navController: NavHostController) {
             }
         }
 
+        item {
+            Button(onClick = {
+                navController.navigate(Destination.AnimationScreen.route)
+            } , modifier = Modifier.padding(bottom = 10.dp)) {
+                Text("Animation Screen" , fontWeight = FontWeight.Bold , fontSize = 20.sp)
+            }
+        }
+
 
 
 

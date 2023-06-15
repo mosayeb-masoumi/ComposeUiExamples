@@ -16,6 +16,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.composeuiexamples.composables.*
 import com.example.composeuiexamples.composables.Button_Loading.ButtonLoadingScreen
+import com.example.composeuiexamples.composables.animation.AnimationScreen
 import com.example.composeuiexamples.composables.botombar_animation.BottomBarAnimationScreen
 import com.example.composeuiexamples.composables.bottombar_badge_lackner.BottomBarBadgeScreen
 import com.example.composeuiexamples.composables.instagram_profile.InstagramProfileScreen
@@ -38,6 +39,8 @@ class MainActivity : ComponentActivity() {
                 ) {
                     val navController = rememberNavController()
                     NavigationAppHost(navController = navController)
+
+//                    AnimationScreen()
                 }
             }
         }
@@ -66,6 +69,7 @@ sealed class Destination(var route: String) {
     object BottomBarBadgeScreen : Destination("BottomBarBadge_Screen")
     object LoginVideoBgScreen : Destination("loginVideoBg_Screen")
     object ButtonLoadingScreen : Destination("buttonLoading_Screen")
+    object AnimationScreen : Destination("animation_Screen")
 }
 
 
@@ -99,6 +103,7 @@ fun NavigationAppHost(navController: NavHostController) {
         composable(Destination.BottomBarBadgeScreen.route) {BottomBarBadgeScreen() }
         composable(Destination.LoginVideoBgScreen.route) {LoginVideoBgScreen() }
         composable(Destination.ButtonLoadingScreen.route) {ButtonLoadingScreen() }
+        composable(Destination.AnimationScreen.route) {AnimationScreen() }
     }
 }
 
