@@ -150,6 +150,16 @@ fun HomeIndex(navController: NavHostController) {
         }
 
 
+        item {
+            Button(onClick = {
+                navController.navigate(Destination.SearchScreen.route)
+            }) {
+                Text(text = "SearchScreen", fontWeight = FontWeight.Bold, fontSize = 20.sp)
+            }
+        }
+
+
+
     }
 }
 
