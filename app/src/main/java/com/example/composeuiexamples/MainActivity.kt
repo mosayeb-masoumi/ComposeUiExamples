@@ -23,6 +23,7 @@ import com.example.composeuiexamples.composables.instagram_profile.InstagramProf
 import com.example.composeuiexamples.composables.permission.PermissionPage
 import com.example.composeuiexamples.composables.login_register.RegisterLogin
 import com.example.composeuiexamples.composables.login_video_bg.LoginVideoBgScreen
+import com.example.composeuiexamples.composables.parallax_toolbar.ParallaxToolbarScreen
 import com.example.composeuiexamples.composables.sharepreference.SharePreferenceScreen
 import com.example.composeuiexamples.ui.theme.ComposeUIExamplesTheme
 
@@ -70,6 +71,7 @@ sealed class Destination(var route: String) {
     object LoginVideoBgScreen : Destination("loginVideoBg_Screen")
     object ButtonLoadingScreen : Destination("buttonLoading_Screen")
     object AnimationScreen : Destination("animation_Screen")
+    object ParallaxToolbarScreen : Destination("parallax_toolbar_Screen")
 }
 
 
@@ -104,6 +106,7 @@ fun NavigationAppHost(navController: NavHostController) {
         composable(Destination.LoginVideoBgScreen.route) {LoginVideoBgScreen() }
         composable(Destination.ButtonLoadingScreen.route) {ButtonLoadingScreen() }
         composable(Destination.AnimationScreen.route) {AnimationScreen() }
+        composable(Destination.ParallaxToolbarScreen.route) { ParallaxToolbarScreen() }
     }
 }
 

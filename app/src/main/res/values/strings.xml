@@ -16,4 +16,6 @@
     <string name="forget_password">forgot your password?</string>
     <string name="add_name">Add Name</string>
     <string name="confirm">Confirm</string>
+    <string name="lorem_ipsum">this is a simple text for test, this is a simple text for test, this is a simple text for test
+    this is a simple text for test</string>
 </resources>
