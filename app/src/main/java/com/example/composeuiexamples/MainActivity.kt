@@ -16,6 +16,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.composeuiexamples.composables.*
 import com.example.composeuiexamples.composables.Button_Loading.ButtonLoadingScreen
+import com.example.composeuiexamples.composables.add_to_list.AddToListScreen
 import com.example.composeuiexamples.composables.animation.AnimationScreen
 import com.example.composeuiexamples.composables.botombar_animation.BottomBarAnimationScreen
 import com.example.composeuiexamples.composables.bottombar_badge_lackner.BottomBarBadgeScreen
@@ -74,6 +75,7 @@ sealed class Destination(var route: String) {
     object AnimationScreen : Destination("animation_Screen")
     object ParallaxToolbarScreen : Destination("parallax_toolbar_Screen")
     object SearchScreen : Destination("Search_Screen")
+    object AddToListScreen : Destination("AddToList_Screen")
 }
 
 
@@ -110,6 +112,7 @@ fun NavigationAppHost(navController: NavHostController) {
         composable(Destination.AnimationScreen.route) {AnimationScreen() }
         composable(Destination.ParallaxToolbarScreen.route) { ParallaxToolbarScreen() }
         composable(Destination.SearchScreen.route) { SearchScreen() }
+        composable(Destination.AddToListScreen.route) {AddToListScreen() }
     }
 }
 
