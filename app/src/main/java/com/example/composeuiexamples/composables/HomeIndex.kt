@@ -158,6 +158,13 @@ fun HomeIndex(navController: NavHostController) {
             }
         }
 
+        item {
+            Button(onClick = {
+                navController.navigate(Destination.AddToListScreen.route)
+            }) {
+                Text(text = "Add to list screen", fontWeight = FontWeight.Bold, fontSize = 20.sp)
+            }
+        }
 
 
     }
