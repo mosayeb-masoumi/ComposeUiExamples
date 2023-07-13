@@ -1,15 +1,21 @@
 package com.example.composeuiexamples
 
+import android.os.Build
 import android.os.Bundle
+import android.view.WindowInsetsController
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.*
 
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -17,6 +23,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.composeuiexamples.composables.*
 import com.example.composeuiexamples.composables.AutoSlider.AutoSliderScreen
 import com.example.composeuiexamples.composables.Button_Loading.ButtonLoadingScreen
+import com.example.composeuiexamples.composables.Keyboard_Overlaping.KeyboardOverlapScreen
 import com.example.composeuiexamples.composables.Network_image.NetworkImageScreen
 import com.example.composeuiexamples.composables.add_to_list.AddToListScreen
 import com.example.composeuiexamples.composables.animation.AnimationScreen
@@ -33,6 +40,7 @@ import com.example.composeuiexamples.ui.theme.ComposeUIExamplesTheme
 
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -49,7 +57,11 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+
     }
+
+
+
 }
 
 
@@ -80,6 +92,7 @@ sealed class Destination(var route: String) {
     object AddToListScreen : Destination("AddToList_Screen")
     object NetworkImageScreen : Destination("NetworkImage_Screen")
     object AutoSliderScreen : Destination("AutoSlider_Screen")
+    object KeyboardOverlapScreen : Destination("KeyboardOverlap_Screen")
 }
 
 
@@ -119,6 +132,7 @@ fun NavigationAppHost(navController: NavHostController) {
         composable(Destination.AddToListScreen.route) {AddToListScreen() }
         composable(Destination.NetworkImageScreen.route) {NetworkImageScreen() }
         composable(Destination.AutoSliderScreen.route) {AutoSliderScreen() }
+        composable(Destination.KeyboardOverlapScreen.route) {KeyboardOverlapScreen() }
     }
 }
 

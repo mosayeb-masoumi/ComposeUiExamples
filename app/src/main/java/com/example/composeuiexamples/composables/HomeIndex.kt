@@ -186,6 +186,14 @@ fun HomeIndex(navController: NavHostController) {
             }
         }
 
+        item {
+            Button(onClick = {
+                navController.navigate(Destination.KeyboardOverlapScreen.route)
+            }) {
+                Text(text = "Keyboard Overlap Screen", fontWeight = FontWeight.Bold, fontSize = 20.sp)
+            }
+        }
+
     }
 }
 
