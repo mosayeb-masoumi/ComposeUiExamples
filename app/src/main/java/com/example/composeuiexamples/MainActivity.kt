@@ -15,7 +15,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.composeuiexamples.composables.*
+import com.example.composeuiexamples.composables.AutoSlider.AutoSliderScreen
 import com.example.composeuiexamples.composables.Button_Loading.ButtonLoadingScreen
+import com.example.composeuiexamples.composables.Network_image.NetworkImageScreen
 import com.example.composeuiexamples.composables.add_to_list.AddToListScreen
 import com.example.composeuiexamples.composables.animation.AnimationScreen
 import com.example.composeuiexamples.composables.botombar_animation.BottomBarAnimationScreen
@@ -76,6 +78,8 @@ sealed class Destination(var route: String) {
     object ParallaxToolbarScreen : Destination("parallax_toolbar_Screen")
     object SearchScreen : Destination("Search_Screen")
     object AddToListScreen : Destination("AddToList_Screen")
+    object NetworkImageScreen : Destination("NetworkImage_Screen")
+    object AutoSliderScreen : Destination("AutoSlider_Screen")
 }
 
 
@@ -113,6 +117,8 @@ fun NavigationAppHost(navController: NavHostController) {
         composable(Destination.ParallaxToolbarScreen.route) { ParallaxToolbarScreen() }
         composable(Destination.SearchScreen.route) { SearchScreen() }
         composable(Destination.AddToListScreen.route) {AddToListScreen() }
+        composable(Destination.NetworkImageScreen.route) {NetworkImageScreen() }
+        composable(Destination.AutoSliderScreen.route) {AutoSliderScreen() }
     }
 }
 

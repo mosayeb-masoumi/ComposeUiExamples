@@ -21,7 +21,10 @@ fun HomeIndex(navController: NavHostController) {
 
     LazyColumn(
 
-        horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth()
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(50.dp)
     ) {
 
         item {
@@ -166,6 +169,22 @@ fun HomeIndex(navController: NavHostController) {
             }
         }
 
+
+        item {
+            Button(onClick = {
+                navController.navigate(Destination.NetworkImageScreen.route)
+            }) {
+                Text(text = "Network Image screen", fontWeight = FontWeight.Bold, fontSize = 20.sp)
+            }
+        }
+
+        item {
+            Button(onClick = {
+                navController.navigate(Destination.AutoSliderScreen.route)
+            }) {
+                Text(text = "Auto Slider Screen", fontWeight = FontWeight.Bold, fontSize = 20.sp)
+            }
+        }
 
     }
 }
