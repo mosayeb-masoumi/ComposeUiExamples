@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Compose_UI_Examples</string>
+    <string name="hello">hi there</string>
+    <string name="create_account">create an account</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="email">Email</string>
+    <string name="password">password</string>
+    <string name="hide_password">Hide password</string>
+    <string name="show_password">Show password</string>
+    <string name="terms_and_conditions">By continuing you accept our Privacy and Terms of use</string>
+    <string name="register">Register</string>
+    <string name="or">or</string>
+    <string name="login">Login</string>
+    <string name="forget_password">forgot your password?</string>
+    <string name="add_name">Add Name</string>
+    <string name="confirm">Confirm</string>
+    <string name="lorem_ipsum">this is a simple text for test, this is a simple text for test, this is a simple text for test
+    this is a simple text for test</string>
+</resources>
