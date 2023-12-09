@@ -37,6 +37,7 @@ import com.example.compose_ui_examples.composables.animation.AnimationScreen
 import com.example.compose_ui_examples.composables.animation_transition_doves.AnimationTransition
 import com.example.compose_ui_examples.composables.botombar_animation.BottomBarAnimationScreen
 import com.example.compose_ui_examples.composables.bottombar_badge_lackner.BottomBarBadgeScreen
+import com.example.compose_ui_examples.composables.draggable_list.DraggableListExample
 import com.example.compose_ui_examples.composables.drop_down_menu.DropDownMenuScreen
 import com.example.compose_ui_examples.composables.instagram_profile.InstagramProfileScreen
 import com.example.compose_ui_examples.composables.login_video_bg.LoginVideoBgScreen
@@ -114,7 +115,8 @@ class MainActivity : ComponentActivity() {
 
 //                    AnimationTransition()
 
-                    TextExamples()
+//                    TextExamples()
+                    DraggableListExample()
                 }
             }
         }
