@@ -51,6 +51,7 @@ import com.example.compose_ui_examples.composables.share_viewmodel.HomeShareView
 import com.example.compose_ui_examples.composables.share_viewmodel.MySharedViewModel
 import com.example.compose_ui_examples.composables.sharepreference.SharePreferenceScreen
 import com.example.compose_ui_examples.composables.tabbar_viewpager.ViewPagerTabBar
+import com.example.compose_ui_examples.composables.texts.TextExamples
 import com.example.compose_ui_examples.ui.theme.Compose_UI_ExamplesTheme
 
 class MainActivity : ComponentActivity() {
@@ -111,7 +112,9 @@ class MainActivity : ComponentActivity() {
 
 //                     StepperExample()
 
-                    AnimationTransition()
+//                    AnimationTransition()
+
+                    TextExamples()
                 }
             }
         }
