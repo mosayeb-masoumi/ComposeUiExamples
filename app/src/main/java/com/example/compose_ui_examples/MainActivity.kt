@@ -1,5 +1,6 @@
 package com.example.compose_ui_examples
 
+import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -10,11 +11,9 @@ import androidx.navigation.compose.composable
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.compose_ui_examples.composables.AutoSlider.AutoSliderScreen
 import com.example.compose_ui_examples.composables.Button_Loading.ButtonLoadingScreen
@@ -34,12 +33,12 @@ import com.example.compose_ui_examples.composables.SaveStateHandlerExample.share
 import com.example.compose_ui_examples.composables.VisibilityGone
 import com.example.compose_ui_examples.composables.add_to_list.AddToListScreen
 import com.example.compose_ui_examples.composables.animation.AnimationScreen
-import com.example.compose_ui_examples.composables.animation_transition_doves.AnimationTransition
 import com.example.compose_ui_examples.composables.botombar_animation.BottomBarAnimationScreen
 import com.example.compose_ui_examples.composables.bottombar_badge_lackner.BottomBarBadgeScreen
-import com.example.compose_ui_examples.composables.draggable_list.DraggableListExample
+import com.example.compose_ui_examples.composables.theme_change.ChangeThemeScreen
 import com.example.compose_ui_examples.composables.drop_down_menu.DropDownMenuScreen
 import com.example.compose_ui_examples.composables.instagram_profile.InstagramProfileScreen
+import com.example.compose_ui_examples.composables.language.LanguageChange
 import com.example.compose_ui_examples.composables.login_video_bg.LoginVideoBgScreen
 import com.example.compose_ui_examples.composables.onboarding.OnBoardingScreen
 import com.example.compose_ui_examples.composables.parallax_toolbar.ParallaxToolbarScreen
@@ -52,12 +51,30 @@ import com.example.compose_ui_examples.composables.share_viewmodel.HomeShareView
 import com.example.compose_ui_examples.composables.share_viewmodel.MySharedViewModel
 import com.example.compose_ui_examples.composables.sharepreference.SharePreferenceScreen
 import com.example.compose_ui_examples.composables.tabbar_viewpager.ViewPagerTabBar
-import com.example.compose_ui_examples.composables.texts.TextExamples
 import com.example.compose_ui_examples.ui.theme.Compose_UI_ExamplesTheme
+import java.util.Locale
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+//        val config = resources.configuration
+//        val locale = Locale("fa")
+//        Locale.setDefault(locale)
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1)
+//            config.setLocale(locale)
+//        else
+//            config.locale = locale
+//
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+//            createConfigurationContext(config)
+//        resources.updateConfiguration(config, resources.displayMetrics)
+
+
+
+
+
         setContent {
             Compose_UI_ExamplesTheme {
                 // A surface container using the 'background' color from the theme
@@ -116,7 +133,12 @@ class MainActivity : ComponentActivity() {
 //                    AnimationTransition()
 
 //                    TextExamples()
-                    DraggableListExample()
+//                    DraggableListExample()
+
+//                    ChangeThemeScreen()
+
+                    LanguageChange()
+
                 }
             }
         }
